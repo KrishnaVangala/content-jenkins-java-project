@@ -47,9 +47,9 @@ pipeline{
         agent{
           docker 'openjdk:8u131-jre'
         }
-        steps {
+        steps{
           sh "wget http://linuxnoob3.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
-          sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 34 45"
+           sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 34 45"
         }
      }
      stage('Promote to Green'){
