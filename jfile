@@ -40,7 +40,7 @@ pipeline{
        }
        steps{
          sh "wget http://linuxnoob3.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
-         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 34 45"
+         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 34 45 "
        }
      }
      stage("Test on Debian"){
@@ -49,7 +49,7 @@ pipeline{
         }
         steps{
           sh "wget http://linuxnoob3.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
-          sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
+          sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 34 45 "
         }
      }
      stage('Promote to Green'){
